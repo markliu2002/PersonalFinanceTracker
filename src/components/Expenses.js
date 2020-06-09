@@ -6,7 +6,7 @@ import ExpenseItem from './ExpenseItem';
 export class Expenses extends Component {
   render() {
     return this.props.expenses.map((expense) => (
-      <ExpenseItem key={expense.name} expense={expense}/>
+      <ExpenseItem expense={expense} delExpense={this.props.delExpense}/>
     ));
   }
 }

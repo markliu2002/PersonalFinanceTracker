@@ -5,8 +5,9 @@
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Roboto Mono', monospace;
   line-height: 1.4;
+  background-color: #fff;
 }
 
 a {
@@ -14,8 +15,12 @@ a {
   text-decoration: none;
 }
 
+.addExpenseDiv {
+  padding: 5px 40px;
+}
+
 form {
-  background-color: white;
+  background-color: #fff;
   clear: both;
   color: #2E383F;
   font-size: large;
@@ -24,6 +29,36 @@ form {
 }
 
 input {
+  font-family: 'Roboto Mono', monospace;
   width: 100%;
   clear: both;
 }
+
+.ExpenseItemDate {
+  
+  /*flex: 1;*/
+  order: 1;
+}
+
+.ExpenseItemName {
+  /*flex: 1;*/
+  order: 2;
+}
+
+.ExpenseItemCat {
+  /*flex: 1;*/
+  order: 3;
+}
+
+.ExpenseItemCost {
+  /*flex: 0.25;*/
+  order: 4;
+}
+
+.sortingDiv {
+  padding: 5px 40px;
+}
+
+
+
+

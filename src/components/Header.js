@@ -14,10 +14,10 @@ export default function Header() {
 
 // CAN USE VARIABLES FOR STYLING, we don't need {{}} only need {}. The style of the Header is set to this
 const headerStyle = {
-  background: '#07617D',
+  backgroundColor: '#07617D',
   color: '#fff',
   fontSize: '30px',
-  fontWeight: 'bold',
+  fontWeight: 'normal',
   textAlign: 'center',
   padding: '30px'
 // #F9A828 < mustard yellow

@@ -1,13 +1,15 @@
 // THIS COMPONENT IS THE FORM ABOVE THE LIST OF ALL THE USER's EXPENSES
 
 import React, { Component } from 'react';
+import moment from 'moment';
 
 export class AddExpense extends Component {
 
   state = {
     name: '',
     cost: 0,
-    category: 'food'
+    category: 'Food',
+    date: moment().format('MMMM Do YYYY, h:mm:ss a'),
   }
 
   handleNameChange = (e) => {
@@ -30,14 +32,27 @@ export class AddExpense extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-    if (this.state.name!=='' && this.state.cost!==0 && this.state.category!=='') {
-      alert(`New Expense Added: ${this.state.name} ${this.state.cost} ${this.state.category}`)
-      this.props.addExpense(this.state.name, this.state.cost, this.state.category);
-    this.setState({
-      name: '',
-      cost: 0,
-      category: ''
-    }); 
+    if (this.state.name!=='' && this.state.cost!==0) {
+
+      // Have to do this to get the current date, or else date will be the same one as from when it initially ran.
+      this.setState({
+        name: this.state.name,
+        cost: this.state.cost,
+        category: this.state.category,
+        date: moment().format('MMMM Do YYYY, h:mm:ss a'),
+      });
+      
+      
+      alert(`New Expense Added: ${this.state.name} $${this.state.cost} ${this.state.category} ${this.state.date}`)
+      this.props.addExpense(this.state.name, this.state.cost, this.state.category, this.state.date);
+
+      // reset everything
+      this.setState({
+        name: '',
+        cost: 0,
+        category: 'Food',
+        date: moment().format('MMMM Do YYYY, h:mm:ss a'),
+      }); 
     } else {
       alert('Missing Information!');
     }
@@ -45,7 +60,7 @@ export class AddExpense extends Component {
 
   render() {
     return (
-      <div>
+      <div className="addExpenseDiv">
         <form onSubmit={this.handleSubmit}>
 
           <label>Name:</label>
@@ -68,11 +83,11 @@ export class AddExpense extends Component {
 
           <label>Category:</label>
           <br />
-          <select value={this.state.category} onChange={this.handleCatChange}>
-            <option value="food" >Food</option>
-            <option value="transportation" >Transportation</option>
-            <option value="utilities" >Utilities</option>
-            <option value="personal" >Personal</option>
+          <select value={this.state.category} onChange={this.handleCatChange} style={{flex:'1'}}>
+            <option value="Food" >Food</option>
+            <option value="Transportation" >Transportation</option>
+            <option value="Utilities" >Utilities</option>
+            <option value="Personal" >Personal</option>
           </select><br />
 
           <input 
