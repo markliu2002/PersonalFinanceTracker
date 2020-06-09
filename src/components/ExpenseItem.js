@@ -1,4 +1,4 @@
-// THIS COMPONENT IS AN INDIVIDUAL EXPENSE ITEM. EACH RECTANGLE
+// INDIVIDUAL EXPENSE ITEM (rectange log) COMPONENT
 
 import React, { Component } from 'react';
 
@@ -8,42 +8,35 @@ export class ExpenseItem extends Component {
     this.props.delExpense(this.props.expense.date);
   }
 
+  // method to set the id name depending on this.props.expense.category 
+  _setIdName() {
+    if (this.props.expense.category === 'Food & Drinks') 
+      return "FoodexpenseItem";
+    else if (this.props.expense.category === 'Transportation')
+      return "TransportexpenseItem";
+    else if (this.props.expense.category === 'Utilities')
+      return "UtilexpenseItem";
+    else 
+      return "PersonalexpenseItem";
+  }
+
   render() {
     return (
-      <div style={itemStyle}>
-        <h2 className="ExpenseItemDate">{this.props.expense.date}</h2>
-        <h2 className="ExpenseItemName">{this.props.expense.name}</h2>
-        <h2 className="ExpenseItemCat">{this.props.expense.category}</h2>
-        <h2 className="ExpenseItemCost">${this.props.expense.cost} <button style={btnStyle} onClick={this.handleDelete}> X </button></h2>
+      // each expense item has the same general form so they call have className="expenseItem". What changes is their background color, so depending on the props.category, their id will be different, and then is App.css, different id's wil have different background colors. Set id to the _setIdName() method
+      <div className="expenseItem"  >
+        <div>
+          <p className="colourStripe" id={this._setIdName()}></p>
+        </div>
+        <div className="ExpenseMainSection">
+          <p className="ExpenseItemText">{this.props.expense.date} {'    '}  {this.props.expense.name} ${this.props.expense.cost}</p>
+        </div>   
+        <div className="ExpenseButtonSection">
+          <button className="deleteBtn" onClick={this.handleDelete}> X </button>
+        </div>
+
       </div>
     );
   }
-}
-
-
-
-const itemStyle = {
-  display: 'flex',                  /* establish flex container */
-  flexDirection: 'row',            /* default value; can be omitted */
-  flexWrap: 'nowrap',              /* default value; can be omitted */
-  justifyContent: 'space-between', /* switched from default (flex-start, see below) */
-
-  background: '#F5F5F5',
-  borderRadius: '15px',
-  borderStyle: 'solid',
-  margin: '5px 30px',
-  padding: '10px 20px',
-}
-
-const btnStyle = {
-  background: '#ff0000',
-  color: '#fff',
-  border: 'none',
-  width: '40%',
-  height: '50%',
-  borderRadius: '10px',
-  cursor: 'pointer',
-  float: 'right'
 }
 
 export default ExpenseItem

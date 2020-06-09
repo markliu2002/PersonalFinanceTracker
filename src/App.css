@@ -7,7 +7,7 @@
 body {
   font-family: 'Roboto Mono', monospace;
   line-height: 1.4;
-  background-color: #fff;
+  background-color:	#d4d1fa;
 }
 
 a {
@@ -15,50 +15,275 @@ a {
   text-decoration: none;
 }
 
+.topSection {
+  background-color: #d4d1fa;
+}
+
+.header {
+  margin-top: 12px;
+  margin-bottom: 0px;
+  margin-left: 12px;
+  margin-right: 12px;
+
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  background-color: #4f1091;
+  color: #fff;
+  font-size: 30px;
+  font-weight: normal;
+  text-align: center;
+  padding: 30px;
+}
+
 .addExpenseDiv {
-  padding: 5px 40px;
+  margin-top: 0px;
+  margin-bottom: 12px;
+  margin-left: 12px;
+  margin-right: 12px;
+
+  padding: 15px 40px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background-color:  #7166ee;
+  -webkit-box-shadow: 0px 7px 9px -2px rgba(0,0,0,0.35);
+  -moz-box-shadow: 0px 7px 9px -2px rgba(0,0,0,0.35);
+  box-shadow: 0px 7px 9px -2px rgba(0,0,0,0.30);
 }
 
 form {
-  background-color: #fff;
-  clear: both;
-  color: #2E383F;
-  font-size: large;
-  font-weight: bold;
-  width: 100%;
+  color: #fff;
+  font-size: 20px;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
 }
 
 input {
+  border-radius: 15px;
+  border-style: none;
+  padding-left: 10px;
+  height: 25px;
   font-family: 'Roboto Mono', monospace;
+  font-size: 15px;
   width: 100%;
-  clear: both;
 }
 
-.ExpenseItemDate {
-  
-  /*flex: 1;*/
-  order: 1;
+select {
+  border-radius: 15px;
+  border-style: none;
+  padding-left: 10px;
+  height: 25px;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 15px;
+  width: 100%;
 }
 
-.ExpenseItemName {
-  /*flex: 1;*/
-  order: 2;
+input[type=submit] {
+  background-color: #4f1091;
+  color: #fff;
+  font-size: 23px;
+  height: 45px;
+  margin-top: 25px;
+  margin-bottom: 10px; /*matches the first labels margin-top: 10px; */
 }
 
-.ExpenseItemCat {
-  /*flex: 1;*/
-  order: 3;
+.sortBtn {
+  font-size: 15px;
+  font-family: 'Roboto Mono', monospace;
+  border-radius: 15px;
+  border-style: none;
+  margin: 10px 30px;
+  padding: 0px;
+  height: 25px;
+
+  flex: 1;
+  -webkit-box-shadow: 0px 7px 9px -2px rgba(0,0,0,0.25);
+  -moz-box-shadow: 0px 7px 9px -2px rgba(0,0,0,0.25);
+  box-shadow: 0px 7px 9px -2px rgba(0,0,0,0.20);
 }
 
-.ExpenseItemCost {
-  /*flex: 0.25;*/
-  order: 4;
+
+
+.legend {
+  list-style: none; 
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
+
+.legend li {
+  float: left; margin-right: 10px;
+}
+
+.FoodLegendIcon {
+  background-color: #fff;
+  font-family: 'Roboto Mono', monospace;
+  border-radius: 15px;
+  border-style: none;
+  margin: 10px 30px;
+  padding: 0px 60px;
+  height: 25px;
+
+  /* flex: 1; */
+  -webkit-box-shadow: 0px 7px 9px -2px rgba(0,0,0,0.25);
+  -moz-box-shadow: 0px 7px 9px -2px rgba(0,0,0,0.25);
+  box-shadow: 0px 7px 9px -2px rgba(0,0,0,0.20);
+}
+
+.Fooddot {
+  border-radius: 50%;
+  height: 15px;
+  width: 15px;
+  background-color: aqua;
+  display: inline-block;
+}
+
+.TransportLegendIcon {
+  background-color: #fff;
+  font-family: 'Roboto Mono', monospace;
+  border-radius: 15px;
+  border-style: none;
+  margin: 10px 30px;
+  padding: 0px 60px;
+  height: 25px;
+
+  /* flex: 1; */
+  -webkit-box-shadow: 0px 7px 9px -2px rgba(0,0,0,0.25);
+  -moz-box-shadow: 0px 7px 9px -2px rgba(0,0,0,0.25);
+  box-shadow: 0px 7px 9px -2px rgba(0,0,0,0.20);
+}
+
+.Transportdot {
+  border-radius: 50%;
+  height: 15px;
+  width: 15px;
+  background-color: rgb(255, 217, 0);
+  display: inline-block;
+}
+
+.UtilLegendIcon {
+  background-color: #fff;
+  font-family: 'Roboto Mono', monospace;
+  border-radius: 15px;
+  border-style: none;
+  margin: 10px 30px;
+  padding: 0px 60px;
+  height: 25px;
+
+  /* flex: 1; */
+  -webkit-box-shadow: 0px 7px 9px -2px rgba(0,0,0,0.25);
+  -moz-box-shadow: 0px 7px 9px -2px rgba(0,0,0,0.25);
+  box-shadow: 0px 7px 9px -2px rgba(0,0,0,0.20);
+}
+
+.Utildot {
+  border-radius: 50%;
+  height: 15px;
+  width: 15px;
+  background-color: rgb(73, 167, 255);
+  display: inline-block;
+}
+
+.PersonalLegendIcon {
+  background-color: #fff;
+  font-family: 'Roboto Mono', monospace;
+  border-radius: 15px;
+  border-style: none;
+  margin: 10px 30px;
+  padding: 0px 60px;
+  height: 25px;
+
+  /* flex: 1; */
+  -webkit-box-shadow: 0px 7px 9px -2px rgba(0,0,0,0.25);
+  -moz-box-shadow: 0px 7px 9px -2px rgba(0,0,0,0.25);
+  box-shadow: 0px 7px 9px -2px rgba(0,0,0,0.20);
+}
+
+.Personaldot {
+  border-radius: 50%;
+  height: 15px;
+  width: 15px;
+  background-color: rgb(250, 104, 129);
+  display: inline-block;
+}
+
+
+
+
 
 .sortingDiv {
-  padding: 5px 40px;
+  display: flex;
+  padding: 5px 160px;
 }
 
 
 
 
+
+
+
+.expenseItem {
+  display: flex;                  /* establish flex container */
+  flex-direction: row;            /* default value; can be omitted */
+  flex-wrap: nowrap;              /* default value; can be omitted */
+  justify-content: space-between; /* switched from default (flex-start, see below) */
+  /* background:#F5F5F5; */
+  border-radius: 15px;
+  border-style: none;
+  margin: 18px 30px;
+  padding: 0px 0px;
+  height: 20%;
+
+  -webkit-box-shadow: 0px 7px 9px -2px rgba(0,0,0,0.35);
+  -moz-box-shadow: 0px 7px 9px -2px rgba(0,0,0,0.35);
+  box-shadow: 0px 7px 9px -2px rgba(0,0,0,0.25);
+}
+
+.colourStripe {
+  /* color: #fff; */
+  border: none;
+  width: 40px;
+  height: 100%;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  cursor: pointer;
+  float: left;
+}
+
+/*Had to seperate ExpenseMainSection and ExpenseButtonSection in the ExpenseItem so we can do this and still have the button take up 100% of its side*/
+.ExpenseMainSection {
+  padding: 10px;
+}
+
+
+#FoodexpenseItem {
+  background-color: aqua;
+}
+
+#TransportexpenseItem {
+  background-color: rgb(255, 217, 0);
+}
+
+#UtilexpenseItem {
+  background-color: rgb(73, 167, 255);
+}
+
+
+#PersonalexpenseItem {
+  background-color: rgb(250, 104, 129);
+}
+
+
+.deleteBtn {
+  background: #ff0000;
+  color: #fff;
+  border: none;
+  width: 40px;
+  height: 100%;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  cursor: pointer;
+  float: right;
+}

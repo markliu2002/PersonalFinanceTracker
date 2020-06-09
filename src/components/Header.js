@@ -1,11 +1,11 @@
-// THIS COMPONENT IS THE HEADER THAT SAYS 'Finance Tracker'
+// HEADER COMPONENT
 
 import React from 'react'
 
 export default function Header() {
   return (
     <div>
-      <header style={headerStyle}>
+      <header className="header">
         Finance Tracker
       </header>
     </div>
@@ -13,16 +13,4 @@ export default function Header() {
 }
 
 // CAN USE VARIABLES FOR STYLING, we don't need {{}} only need {}. The style of the Header is set to this
-const headerStyle = {
-  backgroundColor: '#07617D',
-  color: '#fff',
-  fontSize: '30px',
-  fontWeight: 'normal',
-  textAlign: 'center',
-  padding: '30px'
-// #F9A828 < mustard yellow
-// #ECECEB < white
-// #07617D < navy blue
-// #2E383F < dark blue
-}
 

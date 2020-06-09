@@ -1,4 +1,4 @@
-// THIS COMPONENT IS JUST AN ARRAY OF ALL THE ExpenseItems
+// ARRAY OF ALL THE ExpenseItems COMPONENT
 
 import React, { Component } from 'react';
 import ExpenseItem from './ExpenseItem';

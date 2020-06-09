@@ -1,4 +1,4 @@
-// THIS COMPONENT IS THE FORM ABOVE THE LIST OF ALL THE USER's EXPENSES
+// ADDING EXPENSES COMPONENT
 
 import React, { Component } from 'react';
 import moment from 'moment';
@@ -8,7 +8,7 @@ export class AddExpense extends Component {
   state = {
     name: '',
     cost: 0,
-    category: 'Food',
+    category: 'Food & Drinks',
     date: moment().format('MMMM Do YYYY, h:mm:ss a'),
   }
 
@@ -50,7 +50,7 @@ export class AddExpense extends Component {
       this.setState({
         name: '',
         cost: 0,
-        category: 'Food',
+        category: 'Food & Drinks',
         date: moment().format('MMMM Do YYYY, h:mm:ss a'),
       }); 
     } else {
@@ -70,7 +70,7 @@ export class AddExpense extends Component {
           placeholder="Add Expense Name..."
           value={this.state.name} 
           onChange={this.handleNameChange} // React ships with a number of synthetic events that work across all browsers. One of these is onChange which will capture any changes to our input box. need to add an onChange handler and update the state b/c when we start typing in the textbox, the title in the state is going to have whatever we type inside of it.
-          /><br />
+          />
 
           <label>Cost:</label>
           <input 
@@ -79,17 +79,16 @@ export class AddExpense extends Component {
           placeholder="Add Expense Cost..."
           value={this.state.cost} 
           onChange={this.handleCostChange} // React ships with a number of synthetic events that work across all browsers. One of these is onChange which will capture any changes to our input box. need to add an onChange handler and update the state b/c when we start typing in the textbox, the title in the state is going to have whatever we type inside of it.
-          /><br />
+          />
 
           <label>Category:</label>
-          <br />
           <select value={this.state.category} onChange={this.handleCatChange} style={{flex:'1'}}>
-            <option value="Food" >Food</option>
+            <option value="Food & Drinks" >Food & Drinks</option>
             <option value="Transportation" >Transportation</option>
             <option value="Utilities" >Utilities</option>
             <option value="Personal" >Personal</option>
-          </select><br />
-
+          </select>
+          
           <input 
           type="submit" 
           value="Submit"
