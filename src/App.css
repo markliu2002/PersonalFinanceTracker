@@ -20,10 +20,10 @@ a {
 }
 
 .header {
-  margin-top: 12px;
+  margin-top: 20px;
   margin-bottom: 0px;
-  margin-left: 12px;
-  margin-right: 12px;
+  margin-left: 20px;
+  margin-right: 20px;
 
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
@@ -37,9 +37,9 @@ a {
 
 .addExpenseDiv {
   margin-top: 0px;
-  margin-bottom: 12px;
-  margin-left: 12px;
-  margin-right: 12px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
 
   padding: 15px 40px;
   border-bottom-left-radius: 20px;
@@ -84,7 +84,7 @@ input[type=submit] {
   background-color: #4f1091;
   color: #fff;
   font-size: 23px;
-  height: 45px;
+  height: 55px;
   margin-top: 25px;
   margin-bottom: 10px; /*matches the first labels margin-top: 10px; */
 }
@@ -111,6 +111,11 @@ input[type=submit] {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+span {
+  margin-right: 6px;
+  margin-top: 5px;
 }
 
 .legend li {
@@ -215,7 +220,7 @@ input[type=submit] {
 
 .sortingDiv {
   display: flex;
-  padding: 5px 160px;
+  padding: 5px 100px;
 }
 
 
@@ -225,6 +230,7 @@ input[type=submit] {
 
 
 .expenseItem {
+  background-color: #fff;
   display: flex;                  /* establish flex container */
   flex-direction: row;            /* default value; can be omitted */
   flex-wrap: nowrap;              /* default value; can be omitted */
