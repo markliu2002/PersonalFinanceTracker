@@ -1,8 +1,10 @@
-// SORTING BUTTONS COMPONENT
+// SORTING BUTTON COMPONENT
 import React, { Component } from 'react'
 
 export class Sorting extends Component {
 
+  // render() method that returns what to display
+  // onClick we call the reverseSort method which we got passed down as a prop
   render() {
     return (
       <div className="sortingDiv">
@@ -12,4 +14,5 @@ export class Sorting extends Component {
   }
 }
 
+// "export" is ES6's feature which is used to Export a module(file) and use it in some other module(file).
 export default Sorting

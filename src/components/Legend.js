@@ -1,6 +1,10 @@
+// LEGEND COMPONENT WHICH SHOWS THE CATEGORIES AND THEIR COLOURS
 import React from 'react'
 
 export default function Legend() {
+
+  // Used an unordered list, each list item is a category
+  // Used span for the coloured dots
   return (
     <ul className="legend">
 
