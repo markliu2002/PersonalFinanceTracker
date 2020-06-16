@@ -1,3 +1,10 @@
+# Personal Finance Tracker
+A personal finance tracker built with React to allow the user to add, delete, and customize their expenses 
+
+## Desktop
+![Desktop View](https://github.com/markliu2002/PersonalFinanceTracker/public/desktop_view.png?raw=true)
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 # Available Scripts
