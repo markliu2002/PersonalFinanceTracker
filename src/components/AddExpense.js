@@ -61,7 +61,7 @@ export class AddExpense extends Component {
   render() {
     return (
       <div className="addExpenseDiv">
-        <form onSubmit={this.handleSubmit}>
+        <form onSubmit={this.handleSubmit} action="" method="">
 
           <label>Name:</label>
           <input 
