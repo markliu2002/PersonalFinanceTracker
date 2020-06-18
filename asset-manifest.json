@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/PersonalFinanceTracker/static/css/main.f10b82ea.chunk.css",
+    "main.js": "/PersonalFinanceTracker/static/js/main.995983dc.chunk.js",
+    "main.js.map": "/PersonalFinanceTracker/static/js/main.995983dc.chunk.js.map",
+    "runtime-main.js": "/PersonalFinanceTracker/static/js/runtime-main.26fceb1b.js",
+    "runtime-main.js.map": "/PersonalFinanceTracker/static/js/runtime-main.26fceb1b.js.map",
+    "static/js/2.4baf080b.chunk.js": "/PersonalFinanceTracker/static/js/2.4baf080b.chunk.js",
+    "static/js/2.4baf080b.chunk.js.map": "/PersonalFinanceTracker/static/js/2.4baf080b.chunk.js.map",
+    "index.html": "/PersonalFinanceTracker/index.html",
+    "precache-manifest.0750ba27123b5c7649686af992a8b888.js": "/PersonalFinanceTracker/precache-manifest.0750ba27123b5c7649686af992a8b888.js",
+    "service-worker.js": "/PersonalFinanceTracker/service-worker.js",
+    "static/css/main.f10b82ea.chunk.css.map": "/PersonalFinanceTracker/static/css/main.f10b82ea.chunk.css.map",
+    "static/js/2.4baf080b.chunk.js.LICENSE.txt": "/PersonalFinanceTracker/static/js/2.4baf080b.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.26fceb1b.js",
+    "static/js/2.4baf080b.chunk.js",
+    "static/css/main.f10b82ea.chunk.css",
+    "static/js/main.995983dc.chunk.js"
+  ]
+}
